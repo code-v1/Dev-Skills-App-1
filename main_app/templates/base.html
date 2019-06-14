@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <div class="purple nav-wrapper">
+            <div class="blue nav-wrapper">
                 <ul>
                     <li>
                         <a href="{% url 'home' %}" class="left brand-logo">Dev Skills</a>
@@ -25,18 +25,20 @@
                         <a href="">Logout</a>
                     </li>
                     <li>
-                        <a href="">Register</a>
+                        <a href="{% url 'signup' %}">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="container">
     {% block content %}
     {% endblock %}
     </main>
-    <footer>
-
-    </footer>
+    <footer>Copyright &copy; DevSkills <span id="year"></span></footer>
+    <script>
+        var year = new Date().getFullYear();
+        document.getElementById('year').textContent = year;
+    </script>
 </body>
 </html>
