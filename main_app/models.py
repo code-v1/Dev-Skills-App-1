@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 SKILL_LEVELS = (
@@ -18,3 +19,8 @@ class Skill(models.Model):
         choices=SKILL_LEVELS,
         default=1
         )
+    
+    # TODO refactor to redirect tto index of skills page
+    def get_absolute_url(self):
+        return reverse('home')
+
