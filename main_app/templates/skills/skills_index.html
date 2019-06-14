@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        {% for s in skill_list %}
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">{{ s.skill }}</span>
+                <p>{{ s.get_skill_level_display }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

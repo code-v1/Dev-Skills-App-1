@@ -20,7 +20,6 @@ class Skill(models.Model):
         default=1
         )
     
-    # TODO refactor to redirect tto index of skills page
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('skills_index')
 
