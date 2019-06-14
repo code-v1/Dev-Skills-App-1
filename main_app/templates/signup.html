@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .helptext, form > ul {
+        display: none;
+    }
+</style>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="blue btn" type="submit" value="Register">
+    </form>
+{% endblock %}
